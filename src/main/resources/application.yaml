@@ -5,8 +5,10 @@ spring:
   application:
     name: "spring boot test"
 
-
-
-database:
-  test: 1321
-  wang: "nnnnnnnn"
+people:
+  student:
+    name: "qpointwang"
+    age: 25
+  teacher:
+    name: "xianzhouwang"
+    age: 25
