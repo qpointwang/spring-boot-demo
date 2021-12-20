@@ -4,7 +4,11 @@ server:
 spring:
   application:
     name: "spring boot test"
-
+  datasource:
+    url: jdbc:mysql://9.135.248.199:3306/mybatis?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2B8
+    username: root
+    password: sjzrf@9453JEaC
+    driver-class-name: com.mysql.cj.jdbc.Driver
 people:
   student:
     name: "qpointwang"
@@ -12,3 +16,5 @@ people:
   teacher:
     name: "xianzhouwang"
     age: 25
+
+  

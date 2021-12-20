@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -45,5 +46,11 @@ public class DeptController {
         ScopeBean scopeBean2 = applicationContext.getBean(ScopeBean.class);
         System.out.println(scopeBean1 == scopeBean2);
         return "qpointwang";
+    }
+
+    @RequestMapping
+    public String cheewang(){
+        System.out.println("hhhhhh");
+        return "cheewang";
     }
 }

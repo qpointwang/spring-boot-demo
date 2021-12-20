@@ -1,6 +1,8 @@
 package com.example.demo;
 
-import com.example.demo.pojo.BusinessPerson;
+import com.example.demo.service.AsyncTestServiceA;
+import com.example.demo.service.AsyncTestServiceB;
+import com.example.demo.service.AsyncTestServiceC;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -20,6 +22,16 @@ public class DemoApplication {
 //        businessPerson.service();
 //        businessPerson.selfDestroy();
 //        businessPerson.destroy();
+
+        // 异步测试
+        AsyncTestServiceC asyncTestServiceC = applicationContext.getBean(AsyncTestServiceC.class);
+        asyncTestServiceC.testAsyncC();
+        AsyncTestServiceA asyncTestServiceA = applicationContext.getBean(AsyncTestServiceA.class);
+        asyncTestServiceA.testAsyncA();
+        AsyncTestServiceB asyncTestServiceB = applicationContext.getBean(AsyncTestServiceB.class);
+        asyncTestServiceB.testAsyncB();
+
+        System.out.println("main函数执行完成");
     }
 
 }
